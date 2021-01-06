@@ -7,17 +7,15 @@ draft: false
 featured: false
 authors:
   - Daipayan Banerjee
-lastmod: 2020-12-13T00:00:00Z
+lastmod: 2020-12-13T00:00:00.000Z
 tags:
   - Docker
   - DevOps
   - Security
-categories:
-  - Demo
-  - 教程
+categories: []
 projects: []
 image:
-  caption: "Image credit: [**Unsplash**](https://unsplash.com/photos/CpkOjOcXdUY)"
+  caption: ""
   focal_point: ""
   placement: 2
   preview_only: false
