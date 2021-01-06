@@ -1,45 +1,30 @@
 ---
-# An instance of the Featurette widget.
-# Documentation: https://wowchemy.com/docs/page-builder/
 widget: featurette
-
-# This file represents a page section.
 headless: true
-
-# Order that this section appears on the page.
 weight: 30
-
 title: Skills
-subtitle:
-
-# Showcase personal skills or business features.
-# - Add/remove as many `feature` blocks below as you like.
-# - For available icons, see: https://wowchemy.com/docs/page-builder/#icons
+subtitle: null
 feature:
-- description: 90%
-  icon: r-project
-  icon_pack: fab
-  name: R
-- description: 100%
-  icon: chart-line
-  icon_pack: fas
-  name: Statistics
-- description: 10%
-  icon: camera-retro
-  icon_pack: fas
-  name: Photography
-
-# Uncomment to use emoji icons.
-#- icon: ":smile:"
-#  icon_pack: "emoji"
-#  name: "Emojiness"
-#  description: "100%"  
-
-# Uncomment to use custom SVG icons.
-# Place custom SVG icon in `assets/images/icon-pack/`, creating folders if necessary.
-# Reference the SVG icon name (without `.svg` extension) in the `icon` field.
-#- icon: "your-custom-icon-name"
-#  icon_pack: "custom"
-#  name: "Surfing"
-#  description: "90%"
+  - description: 90%
+    icon: r-project
+    icon_pack: fab
+    name: R
+  - description: 100%
+    icon: chart-line
+    icon_pack: fas
+    name: Statistics
+  - description: 10%
+    icon: camera-retro
+    icon_pack: fas
+    name: Photography
+widget_id: Skills
 ---
+Scripting/Programming Languages: Python, Java, BASH 
+DevOps: Ansible, Puppet, Saltstack, Docker, Kubernetes
+Database: MySQL, Redis
+SIEM: Splunk 
+Forensics: Volatility, FTK Imager, Autopsy
+Binary Analysis & Reversing: gdb, gcc, hexdump, objdump, ltrace, strace, Immunity Debugger, Ida Pro, PEDump, PEStudio
+Penetration Testing Tools: Metasploit, Wireshark, Burp-suite, NMAP, wpscan, dirb, nikto, gobuster, Empire 
+Cloud Computing: GCP GKE, Amazon EKS, AWS: VPC, NACL, IAM, Security Groups, EC2, AMI, Cloud Formation   
+Container Security: CIS Benchmark Scanning, Kube-bench, Trivy, kube-audit, Sysdig Falco, Docker Bench, Anchore
