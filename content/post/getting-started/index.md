@@ -1,105 +1,167 @@
 ---
-title: Welcome to Wowchemy, the website builder for Hugo
-subtitle: Welcome 👋 We know that first impressions are important, so we've populated your new site with some initial content to help you get familiar with everything in no time.
-
-# Summary for listings and search engines
-summary: Welcome 👋 We know that first impressions are important, so we've populated your new site with some initial content to help you get familiar with everything in no time.
-
-# Link this post with a project
-projects: []
-
-# Date published
-date: "2016-04-20T00:00:00Z"
-
-# Date updated
-lastmod: "2020-12-13T00:00:00Z"
-
-# Is this an unpublished draft?
+title: Short Tutorial on Docker
+subtitle: ""
+date: 2021-01-06T06:06:41.240Z
+summary: A short intro into Docker
 draft: false
-
-# Show this page in the Featured widget?
 featured: false
-
-# Featured image
-# Place an image named `featured.jpg/png` in this page's folder and customize its options here.
+authors:
+  - Daipayan Banerjee
+lastmod: 2020-12-13T00:00:00Z
+tags:
+  - Docker
+  - DevOps
+  - Security
+categories:
+  - Demo
+  - 教程
+projects: []
 image:
-  caption: 'Image credit: [**Unsplash**](https://unsplash.com/photos/CpkOjOcXdUY)'
+  caption: "Image credit: [**Unsplash**](https://unsplash.com/photos/CpkOjOcXdUY)"
   focal_point: ""
   placement: 2
   preview_only: false
-
-authors:
-- admin
-- 吳恩達
-
-tags:
-- Academic
-- 开源
-
-categories:
-- Demo
-- 教程
 ---
 
-## Overview
 
-1. The Wowchemy website builder for Hugo, along with its starter templates, is designed for professional creators, educators, and teams/organizations - although it can be used to create any kind of site
-2. The template can be modified and customised to suit your needs. It's a good platform for anyone looking to take control of their data and online identity whilst having the convenience to start off with a **no-code solution (write in Markdown and customize with YAML parameters)** and having **flexibility to later add even deeper personalization with HTML and CSS**
-3. You can work with all your favourite tools and apps with hundreds of plugins and integrations to speed up your workflows, interact with your readers, and much more
+### **Why Docker?**
 
-{{< figure src="https://raw.githubusercontent.com/wowchemy/wowchemy-hugo-modules/master/academic.png" title="The template is mobile first with a responsive design to ensure that your site looks stunning on every device." >}}
+By now Docker has been around for quite a few years, and has made it's advantages and importance visible to the Development-Operations(DevOps) world.
 
-## Get Started
+Virtual Machine images are huge in size as they contain the Guest OS required for the application to run. Whereas Container images are pretty lightweight as they may not contain a Guest OS inside and can run off the Host OS, thus containing only the Application to be run and it's dependencies(Libraries and Binaries). 
+This becomes extremely beneficial when the deployments are done on a huge scale.
 
-- 👉 [**Create a new site**](https://wowchemy.com/templates/)
-- 📚 [**Personalize your site**](https://wowchemy.com/docs/)
-- 💬 [Chat with the **Wowchemy community**](https://discord.gg/z8wNYzb) or [**Hugo community**](https://discourse.gohugo.io)
-- 🐦 Twitter: [@wowchemy](https://twitter.com/wowchemy) [@GeorgeCushen](https://twitter.com/GeorgeCushen) [#MadeWithWowchemy](https://twitter.com/search?q=(%23MadeWithWowchemy%20OR%20%23MadeWithAcademic)&src=typed_query)
-- 💡 [Request a **feature** or report a **bug** for _Wowchemy_](https://github.com/wowchemy/wowchemy-hugo-modules/issues)
-- ⬆️ **Updating Wowchemy?** View the [Update Guide](https://wowchemy.com/docs/update/) and [Release Notes](https://wowchemy.com/updates/)
+With Docker the various teams need not worry about preparing their platform to run/test their applications, as the applications' containers would already be packaged with it's dependencies. Therefore this minimalistic approach of Docker containers help in speeding up the process of Development, Testing & Deployment.
 
-## Crowd-funded open-source software
+## **Lets begin with the Docker tutorial now**
 
-To help us develop this template and software sustainably under the MIT license, we ask all individuals and businesses that use it to help support its ongoing maintenance and development via sponsorship.
+### **Docker Registries:**
 
-### [❤️ Click here to become a sponsor and help support Wowchemy's future ❤️](https://wowchemy.com/plans/)
+There already exists a huge collection of Docker images built by various organizations and individuals, that you can use and build upon. These images are hosted on various registries. The most popular one of them is the [DockerHub](https://hub.docker.com/).
 
-As a token of appreciation for sponsoring, you can **unlock [these](https://wowchemy.com/plans/) awesome rewards and extra features 🦄✨**
+There are others as well such as:
+[Azure Container Registry](https://azure.microsoft.com/en-us/services/container-registry/#overview)
+[Amazon Elastic Container Registry](https://aws.amazon.com/ecr/)
+[Google Container Registry](https://cloud.google.com/container-registry)
 
-## Ecosystem
+### **Docker Images vs Containers:**
 
-* **[Wowchemy Admin](https://github.com/wowchemy/wowchemy-admin/):** An admin tool to automatically import publications from BibTeX
+We started off this tutorial by hearing about Docker Containers and now we are talking about Docker Images. So what is the difference between the two? If you have used Virtual Machines in the past you must have heard of Snapshots. So Containers can be thought of snapshots Docker Images in the runtime. But you still can't make any changes to the Docker Images, that needs to be done before the Docker Image has been built.
 
-## Inspiration
+### **What is inside a Docker Image:**
 
-[Check out the latest **demo**](https://academic-demo.netlify.com/) of what you'll get in less than 10 minutes, or [view the **showcase**](https://wowchemy.com/user-stories/) of personal, project, and business sites.
+Basically, anything and everything that the application needs to run, that includes obviously the Application code, any libraries or binaries, any environment variables that need to be set or any kind of miscellaneous files.
 
-## Features
+### **Installing Docker and Docker-compose:**
 
-- **Page builder** - Create *anything* with [**widgets**](https://wowchemy.com/docs/page-builder/) and [**elements**](https://wowchemy.com/docs/writing-markdown-latex/)
-- **Edit any type of content** - Blog posts, publications, talks, slides, projects, and more!
-- **Create content** in [**Markdown**](https://wowchemy.com/docs/writing-markdown-latex/), [**Jupyter**](https://wowchemy.com/docs/import/jupyter/), or [**RStudio**](https://wowchemy.com/docs/install-locally/)
-- **Plugin System** - Fully customizable [**color** and **font themes**](https://wowchemy.com/docs/customization/)
-- **Display Code and Math** - Code highlighting and [LaTeX math](https://en.wikibooks.org/wiki/LaTeX/Mathematics) supported
-- **Integrations** - [Google Analytics](https://analytics.google.com), [Disqus commenting](https://disqus.com), Maps, Contact Forms, and more!
-- **Beautiful Site** - Simple and refreshing one page design
-- **Industry-Leading SEO** - Help get your website found on search engines and social media
-- **Media Galleries** - Display your images and videos with captions in a customizable gallery
-- **Mobile Friendly** - Look amazing on every screen with a mobile friendly version of your site
-- **Multi-language** - 34+ language packs including English, 中文, and Português
-- **Multi-user** - Each author gets their own profile page
-- **Privacy Pack** - Assists with GDPR
-- **Stand Out** - Bring your site to life with animation, parallax backgrounds, and scroll effects
-- **One-Click Deployment** - No servers. No databases. Only files.
+Installing Docker and Docker-compose is pretty straightforward. [Installing Docker](https://docs.docker.com/get-docker/). [Installing Docker-compose](https://docs.docker.com/compose/install/)
 
-## Themes
+### **Running a container**
 
-Wowchemy and its templates come with **automatic day (light) and night (dark) mode** built-in. Alternatively, visitors can choose their preferred mode - click the moon icon in the top right of the [Demo](https://academic-demo.netlify.com/) to see it in action! Day/night mode can also be disabled by the site admin in `params.toml`.
+You can search for existing images on DockerHub using the command:  `docker search redis`  
+You can then run the image with the following way `docker run -d redis -p 6379:6379 --name redis-db`. If there is no specific version mentioned in the command Docker downlaods and runs the latest version of the image.  
+The `-d`  flag makes the container run it *detached* mode i.e. in backgroud. If it's an interactive application then you can use the `-it` flag.  
+The `--name` flag assigns a user defined identifier to the container.  
+The `-p <Host Port>:<Container Port>` flag maps/exposes the `<Container Port>` to the `<Docker Host Port>`  
+The `-e` flag allows you to define any ENVIRONMENT VARIABLE that you would like to define.
 
-[Choose a stunning **theme** and **font**](https://wowchemy.com/docs/customization) for your site. Themes are fully customizable.
+You can find out about other helpful [Docker flags](https://docs.docker.com/engine/reference/run/)
 
-## License
+### **Inspecting a running Container**
 
-Copyright 2016-present [George Cushen](https://georgecushen.com).
+`docker ps` lists all the running containers.  
+`docker inspect <container-name>` outputs more in-depth details of that container.  
+`docker logs <container-name>` outputs the messages written to std-out and std-err streams.
 
-Released under the [MIT](https://github.com/wowchemy/wowchemy-hugo-modules/blob/master/LICENSE.md) license.
+### **Docker run: Run commands inside Container**
+The `docker run <Container-name> <command>` command executes the specified command inside the container. For example: `docker run ubuntu ps`  
+The `-it` flag can be added to execute the coammand in an interactive way. `docker run -it ubuntu bash`
+
+### **Building Docker images using Dockerfile**
+
+Till now we ran containers based on pre-built images from DockerHub, now we are going to look at building our own images using Dockerfile.  
+Here is a sample Ubuntu Dockerfile.  
+```
+FROM ubuntu:18.04
+
+RUN apt-get update && apt-get install -y iputils-ping && apt-get -y install nginx 
+
+COPY default /etc/nginx/sites-enabled/default
+
+EXPOSE 80
+
+CMD /etc/init.d/nginx restart && bash
+```  
+Here we are building upon a base Ubuntu Image. We want to run Nginx in this container, so we update package information and install Nginx. We then copy the necessary config file to the appropriate location inside the container. We espose the port 80 to the Docker host. We then follow it with the necessary coammnds to be excuted once the container is running. 
+
+### **CMD vs Entrypoint vs Run**
+
+`RUN` defines commands that need to be executed in the process of building the image. Whereas `CMD` and `ENTRYPOINT` defines commands that must be executed upon execution/starting of the container.  
+The difference between `CMD` and `ENTRYPOINT` can be confusing at times, but I'll try my best to explain. `ENTRYPOINT` defines the default command that should be executed with the starting of the container. For example for Ubuntu images by default it is `/bin/sh -c`. `CMD` defines commands that need to be executed once the container is up and running. Here is a great discussion on the differences between `CMD` and `ENTRYPOINT`.  
+[What is the difference between CMD and ENTRYPOINT in a Dockerfile?](https://stackoverflow.com/questions/21553353/what-is-the-difference-between-cmd-and-entrypoint-in-a-dockerfile) 
+
+### **Volumes**
+
+For persisting data in the containers a great way is to map a local directory to a directory in the container using the `-v <Host Directory>:<Container Directory>` flag. This can be marked as read-only adding the `:ro` parameter. `-v <Host Directory>:<Container Directory>:ro`  
+For sharing a volume with a new container which is already being used by another container, we simply add `--volumes-from <Container-name>`.  
+
+### **Networks**
+
+A network for the Containers to communicate with each other can be easily created using the `docker network create <network-name>` and can be added in the docker run command using the `--net=<network-name>`. The `docker network connect <container-name>` can be used to connect an existing container to the network.
+
+### **Docker-compose**
+
+It is rarely ever the case that our final application requires just one container to run. So to manage multiple different containers who each play a different role we need a program to manage them. This can be done manually, which will be quite tedious or using a file containing the necessary parameters required to run the containers. This is where Docker-compose comes in. It is a file which contains the necessary details for every container that we need.
+
+Here is an example `docker-compose.yml` file. This file is creating a Nginx Load Balancer, MySQL DB and Wordpress Container. There are 3 `replicas` of the WP container, the traffic to which will be controlled by the Nginx Proxy.
+
+```
+version: "3.3"
+services:
+  nginx-proxy:
+    image: jwilder/nginx-proxy
+    container_name: nginx1-proxy
+    ports:
+      - "80:80"
+    volumes:
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+    environment: 
+      DEFAULT_HOST: blog.DOMAIN.TLD
+  db:
+    image: mysql:5.7
+    volumes:
+      - db_data:/var/lib/mysql
+    restart: always
+    expose: 
+      - "3306"
+    env_file: 
+      - mysql-variables.env
+    container_name: mysql_db
+
+  wordpress:
+    depends_on:
+      - db
+    image: wordpress:latest
+    expose:
+      - "80"
+    env_file: 
+      - wp-variables.env
+    deploy:
+      mode: replicated
+      replicas: 3
+
+volumes:
+    db_data: {}
+
+networks:
+  default:
+    external:
+      name: nginx-proxy
+```
+The command used to run this `docker-compose up -d --compatiility`
+
+Instead of using Docker hub images we can build our own images using `Docker-file` and `build: .`
+
+The `docker-compose.yml` consists of commands that we were already running but in a different from that requires less of human interaction. 
+
+***I'll be adding more topics to this document as I continue to explore Docker.***
