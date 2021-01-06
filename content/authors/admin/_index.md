@@ -1,7 +1,7 @@
 ---
 title: Daipayan Banerjee
-role: Cybersecurity Enthusiast
-avatar_filename: hugo_avatar.jpg
+role: Cybersecurity Graduate Student
+avatar_filename: avatar.jpg
 bio: My interests include penetration testing, vulnerability assessment and
   digital forensics.
 interests:
